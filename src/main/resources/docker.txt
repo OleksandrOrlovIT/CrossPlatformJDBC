@@ -1,0 +1,6 @@
+docker network create mynetwork
+docker run -d --name lab7JDBC --network=mynetwork -e MYSQL_ROOT_PASSWORD=lab6Orlov -p 3306:3306 mysql:latest
+
+docker stop lab7JDBC
+docker rm lab7JDBC
+docker network rm mynetwork
